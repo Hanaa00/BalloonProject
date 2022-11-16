@@ -1,0 +1,80 @@
+Code:
+class Solution {
+
+    public int maxNumberOfBalloons(String text) {
+
+        TreeSet<Character> al=new TreeSet<Character>();
+
+        for(int i=0;i<text.length();i++)
+
+        {
+
+            al.add(text.charAt(i));
+
+        }
+
+        int b=0;
+
+        int a=0;
+
+        int l=0;
+
+        int o=0;
+
+        int n=0;
+
+        for(int i=0;i<text.length();i++)
+
+        {
+
+            if(al.contains(text.charAt(i)))
+
+            {
+
+                if(text.charAt(i)=='b')
+
+                    b=b+1;
+
+                else if(text.charAt(i)=='a')
+
+                    a=a+1;
+
+                else if(text.charAt(i)=='l')
+
+                    l=l+1;
+
+                else if(text.charAt(i)=='o')
+
+                    o=o+1;
+
+                else if(text.charAt(i)=='n')
+
+                    n=n+1;
+
+            }
+
+        }
+
+        l=l/2;
+
+        o=o/2;
+
+        int min=0;
+
+        int am[]={b,a,l,o,n};
+
+        min=b;
+
+        for(int i=0;i<am.length;i++)
+
+        {
+
+          min=Math.min(min,am[i]);
+
+        }
+
+        return min;
+
+    }
+
+}
