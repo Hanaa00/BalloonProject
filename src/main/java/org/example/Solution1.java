@@ -31,7 +31,6 @@ class Solution1 {
             if(al.contains(text.toLowerCase().charAt(i)))
 
             {
-
                 if(text.toLowerCase().charAt(i)=='b')
 
                     b=b+1;
