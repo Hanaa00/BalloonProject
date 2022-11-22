@@ -19,7 +19,7 @@ public class WordTooLongExTest {
     @Test
     public void checkWord() {
 
-        WordTooLongException WordTooLong = new WordTooLongException("readFile.txt not found");
+        WordTooLongException WordTooLong = new WordTooLongException("word is too long");
         assertEquals("word is too long", WordTooLong.getLocalizedMessage());
 
     }
